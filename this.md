@@ -135,7 +135,7 @@ obj.getName.call(obj2); //打印李四 undefined undefined
 obj.getName.call(obj2,"测试字符串01","测试的字符串02"); // 李四 测试字符串01 测试的字符串02
 obj.getName.apply(obj2,["123","456"]);   // 李四 123 456
 ```
-上述代码先创建一个对象obj并添加属性name和方法getName,调用自身的方法得出的结果(`张三 123 456`),再创建一个对象obj2,添加属性name,obj.getName.call(obj2);这句话的意思是obj的方法getName借给obj2使用，其obj方法内部的this指向obj2;得出的结果是李四 undefined(没有传参)  undefined(没有传参)；call方法主要是改变this的指向；apply的方法作用和call一样，只是传的参数不一样，call可以只传一个参数（要绑定给this的值），也可以传多个；而apply接收两个参数（要绑定给this的值，[]）,第二个参数是数组，数组的长度不定。
+上述代码先创建一个对象obj并添加属性name和方法getName,调用自身的方法得出的结果(`张三 123 456`),再创建一个对象obj2,添加属性name,`obj.getName.call(obj2)`;这句话的意思是obj的方法getName借给obj2使用，其obj方法内部的this指向obj2;得出的结果是李四 undefined(没有传参)  undefined(没有传参)；call方法主要是改变this的指向；apply的方法作用和call一样，只是传的参数不一样，call可以只传一个参数（要绑定给this的值），也可以传多个；而apply接收两个参数（要绑定给this的值，[]）,第二个参数是数组，数组的长度不定。
 
 ### 二、this关键字用法的注意点
 #### This的丢失问题
@@ -175,7 +175,7 @@ var getId = function () {
 var box = getId('box');       //不会报错
 console.log(box);// <div id="box"></div>
 ```
-上述代码先在`document.getElementById`方法内部添加一个让this指针一直指向document对象的操作;`document.getElementById =(function(func){})(document.getElementById)`;这是一个立即执行函数，把document.getElementById当作实参传进去，而函数内部则返回另一个函数，而这个函数内部则执行改变this指向的操作`document.getElementById.apply(document,arguments)`;意思是让this永远指向document对象；arguments指的是传进去的实参Id(box);
+上述代码先在`document.getElementById`方法内部添加一个让this指针一直指向document对象的操作;`document.getElementById =(function(func){})(document.getElementById)`;这是一个立即执行函数，把`document.getElementById`当作实参传进去，而函数内部则返回另一个函数，而这个函数内部则执行改变this指向的操作`document.getElementById.apply(document,arguments)`;意思是让this永远指向document对象；arguments指的是传进去的实参Id(`box`);
 
 ### 三、结论
 #### This关键字永远指向实际调用者
