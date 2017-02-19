@@ -1,3 +1,10 @@
+---
+title: JavaScript中闭包的作用和简单的用法
+layout: page
+date: 2017-02-18
+modifiedOn: 2017-02-18
+category: oop
+---
 # 在JavaScript中闭包的作用和简单的用法
 
 ## 一、闭包的简介
