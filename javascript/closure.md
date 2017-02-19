@@ -117,7 +117,7 @@ console.log(test1()); // undefined
 
         002、返回多个数据
 
-        * 以数组的形式返回
+        - 以数组的形式返回
 
 ```script
 function person() {
@@ -137,7 +137,7 @@ console.log(p1[1]()); // 45
 
 一般不怎么以数组的形式返回数据！
 
-        * 以对象的形式返回
+        - 以对象的形式返回
 
 ```script
 function person() {
