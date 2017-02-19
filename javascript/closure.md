@@ -19,11 +19,13 @@ category: javascript
 `(function(){var a = 10; return 变量 | 函数 });`
 
      2、通过立即执行函数访问函数内部的变量
+     ```script
         01、 (function(){})();// 常用
         02、 (function(){}());// 常用
         03、 ;function(){}();
         04、 +function(){}();
         05、 -function(){}();
+     ```
 
 ## 三、闭包的作用
 
