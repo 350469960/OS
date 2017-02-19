@@ -185,16 +185,17 @@ function person() {
             //容错性处理 + 逻辑校验
             //判断
             //console.log(num == NaN);// false
-            var str = String(num);// 把获取的实参转为字符串
-            var str1 = String(NaN);// 把NaN转为字符串
-            if ((str == str1) || typeof num != 'number' )
-            {//判断输入的是否为数字类型并且不为NaN
-                throw "该函数只接受数字类型的参数并且不为NaN";
-            }
-            //if (!(parseInt(num) || typeoum != 'number' )
-            //{//parseInt(num)在会截取数字开头的字符串
-            //   throw "该函数只接受数字类型的参数并且不为NaN";
+            //var str = String(num);// 把获取的实参转为字符串
+            //var str1 = String(NaN);// 把NaN转为字符串
+            //if ((str == str1) || typeof num != 'number' )
+            //{//判断输入的是否为数字类型并且不为NaN
+            //    throw "该函数只接受数字类型的参数并且不为NaN";
             //}
+            //parseInt(num)数字为true，其他为false
+            if (!(parseInt(num) || typeof num != 'number' )
+            {//parseInt(num)在会截取数字开头的字符串转为数字 || 所以还要判断类型
+               throw "该函数只接受数字类型的参数并且不为NaN";
+            }
             age = num;
         }
     }
