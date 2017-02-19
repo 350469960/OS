@@ -3,7 +3,7 @@ title: JavaScript中的this关键字的用法和注意点
 layout: page
 date: 2017-02-17
 modifiedOn: 2017-02-17
-category: oop
+category: javascript
 ---
 ## JavaScript中的this关键字的用法和注意点
 ### 一、this关键字的用法
