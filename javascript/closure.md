@@ -191,6 +191,10 @@ function person() {
             {//判断输入的是否为数字类型并且不为NaN
                 throw "该函数只接受数字类型的参数并且不为NaN";
             }
+            //if (!(parseInt(num) || typeoum != 'number' )
+            //{//parseInt(num)在会截取数字开头的字符串
+            //   throw "该函数只接受数字类型的参数并且不为NaN";
+            //}
             age = num;
         }
     }
