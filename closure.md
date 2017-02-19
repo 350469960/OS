@@ -3,7 +3,7 @@ title: JavaScript中闭包的作用和简单的用法
 layout: page
 date: 2017-02-18
 modifiedOn: 2017-02-18
-category: oop
+category: javascript
 ---
 # 在JavaScript中闭包的作用和简单的用法
 
@@ -16,16 +16,14 @@ category: oop
 ## 二、闭包的基本写法
 
      1、通过return来访问函数内部的变量
-
 `(function(){var a = 10; return 变量 | 函数 });`
 
      2、通过立即执行函数访问函数内部的变量
-
-        01、`(function(){})();  // 常用`
-        02、`(function(){}());  // 常用`
-        03、`;function(){}();`
-        04、`+function(){}();`
-        05、`-function(){}();`
+        01、 `(function(){})();// 常用`
+        02、 `(function(){}());// 常用`
+        03、 `;function(){}();`
+        04、 `+function(){}();`
+        05、 `-function(){}();`
 
 ## 三、闭包的作用
 
@@ -41,20 +39,19 @@ category: oop
 
         01、提供一种间接访问函数内部变量的方法
 
-        ```script
+```script
  function A() {
     var num = 10;// 局部变量
     return num;// 访问内部数据
 }
 var B1 = A();
 console.log(B1);// 10   说明局部变量没有销毁   延长函数内部的局部变量的生命周期
-
-        ```
+ ```
 
         上述代码可以在外部访问函数A内部的局部变量，并延长局部变量num的生命周期，但也有缺陷，每次访问都是一次性的，无法修改保存其变量如下代码所示：
 
-        ```script
-            function foo() {
+ ```script
+function foo() {
     var obj = {
         name:"张三",
         age:28
@@ -64,8 +61,7 @@ console.log(B1);// 10   说明局部变量没有销毁   延长函数内部的�
 var obj1 = foo();
 var obj2 = foo();
 console.log(obj1 == obj2);  //false
-
-        ```
+```
 
 上述代码所示两次访问的对象不是同一个`console.log(obj1 == obj2); // false`！
 
@@ -77,7 +73,7 @@ console.log(obj1 == obj2);  //false
 
     };
 })();
-        ```
+```
 
 ```script
 (function () {
