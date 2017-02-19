@@ -28,7 +28,7 @@ function Person() {
 }
 var p1 = new Person();
 console.log(p1.name); // 郭嘉
-console.log(window.name);// 空
+console.log(window.name); // 空
 ```
 上述代码先声明一个函数名为Person的构造函数，给构造函数内部的对象添加属性name,并打印this的指向(新创建的对象：`Person {name: "郭嘉"}`)，用Person构造函数实例化一个对象p1,分别打印p1的属性值和全局对象(window)的属性值，二者不相等说明this指向的是新创建的对象(`Person {name: "郭嘉"}`)而不是全局对象(window);
 
