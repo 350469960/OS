@@ -1,3 +1,10 @@
+---
+title: JavaScript中关于变量与函数的提升
+layout: page
+date: 2017-02-22
+modifiedOn: 2017-02-22
+category: JavaScript
+---
 ## 在javascript中关于变量与函数的提升
 ### 一、简介
 在javascript中声明变量与函数的执行步骤:
@@ -198,7 +205,7 @@ new Foo().getName(); // ?
 new new Foo().getName(); // ?
 ```
 
-### 、四 答案
+### 四、 答案
 
 第一题
 ```script
