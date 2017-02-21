@@ -337,12 +337,12 @@ Foo.prototype.getName = function(){ alert(3); };// 原型方法
 getName = function() { alert(4); };
 
 
-Foo.getName(); // ? 2  构造函数调用自己的静态方法
+Foo.getName(); //  2  构造函数调用自己的静态方法
 //getName = function(){ alert(1); }; 覆盖 getName = function() { alert(4); };
-getName(); // ? 4 window.getName();  5已经被4覆盖
-Foo().getName(); // ? 1 Foo()中this指向window，方法调用把getName = function() { alert(4); };用getName = function(){ alert(1); };覆盖
-getName(); // ? 1 window.getName() 就是调用getName = function(){ alert(1); };
-new Foo.getName(); // ? 2 Foo.getName() 构造函数调用自己的静态方法   new 2 == 2
-new Foo().getName(); // ? 3 (new Foo()).getName() 对象调用原型方法
-new new Foo().getName(); // ? 3  new 3 == 3
+getName(); //  4 window.getName();  5已经被4覆盖
+Foo().getName(); //  1 Foo()中this指向window，方法调用把getName = function() { alert(4); };用getName = function(){ alert(1); };覆盖
+getName(); //  1 window.getName() 就是调用getName = function(){ alert(1); };
+new Foo.getName(); //  2 Foo.getName() 构造函数调用自己的静态方法   new 2 == 2
+new Foo().getName(); //  3 (new Foo()).getName() 对象调用原型方法
+new new Foo().getName(); // 3  new 3 == 3
 ```
